@@ -18,34 +18,47 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 1em;
+  margin-top: -10px;
+  margin-bottom: 40px;
   font-family: 'LandRover', Helvetica, Arial, sans-serif;
 }
 h1 {
-  font-size: 53px;
+  font-size: 42px;
   font-weight: normal;
   line-height: 1.19em;
 }
 h2 {
-  font-size: 42px;
+  font-size: 36px;
   text-align: center;
 }
 h3 {
-  font-size: 37px;
+  font-size: 28px;
   text-align: center;
 }
 h4 {
-  font-size: 35px;
+  font-size: 20px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 15px;
 }
 /*--------------- LAYOUT ---------------*/
 section,
 .jumbotron {
-  margin-bottom: 4rem;
+  margin-bottom: 60px;
+}
+hr {
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+.btn-container {
+  margin-top: -10px;
 }
 .btn-cta {
-  margin: 2rem auto;
   padding: 0;
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
   color: #4a4f54;
   -webkit-transition: all 0.2s ease-out;
@@ -57,10 +70,9 @@ section,
   color: #000000;
 }
 .btn-cta:after {
-  margin-left: 15%;
   content: "";
   display: block;
-  width: 70%;
+  width: 100%;
   height: 5px;
   background: #ff6600;
 }
@@ -73,7 +85,11 @@ section,
   position: absolute;
   top: 0;
   opacity: .55;
-  background: #4a4f54;
+  background: #4f5659;
+  background: -moz-linear-gradient(-45deg, #4f5659 0%, #4f5659 70%, #ba906d 100%);
+  background: -webkit-linear-gradient(-45deg, #4f5659 0%, #4f5659 70%, #ba906d 100%);
+  background: linear-gradient(135deg, #4f5659 0%, #4f5659 70%, #ba906d 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#4f5659', endColorstr='#ba906d', GradientType=1);
 }
 img.float-right {
   margin-left: 1.3em;
@@ -82,35 +98,21 @@ img.float-right {
   clear: both;
 }
 header {
-  margin-bottom: 4px;
+  margin-bottom: 0;
   max-height: 82px;
 }
 header .logo-container {
+  margin-top: -5px;
   padding: 0;
   text-align: center;
-}
-header .logo-container p {
-  margin: 0 auto;
-  padding: .4em 0 0 0;
-  width: 85%;
-  position: relative;
-  z-index: 2;
-  font-size: .9rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-top: 3px solid #333;
-}
-header .logo {
-  margin: 0 auto;
-  width: 130px;
 }
 /* --------------- MAIN NAVIGATION ---------------*/
 .navbar {
   padding-top: 0;
-  padding-bottom: 5px;
+  padding-bottom: 0;
 }
 .navbar .navbar-collapse {
-  margin-top: -6px;
+  max-height: 82px;
   position: relative;
   z-index: 100;
   background: #ffffff;
@@ -144,20 +146,20 @@ header .logo {
   border-left: none;
 }
 footer.main-footer {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 60px;
+  padding-bottom: 60px;
   color: #ffffff;
   background: #4a4f54;
 }
 footer.main-footer img {
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 footer.main-footer h4 {
   font-size: 1.7rem;
   font-weight: normal;
 }
 footer.main-footer form {
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 footer.main-footer form input.form-control-sm {
   color: #ffffff;
@@ -173,8 +175,15 @@ footer.main-footer form input.form-control-sm:-moz-placeholder {
 footer.main-footer form input.form-control-sm::-moz-placeholder {
   color: #ffffff;
 }
+footer.main-footer form .btn-submit-footer {
+  margin-left: 1em;
+  width: 50%;
+  color: #ffffff;
+  border: 2px solid #ff6600;
+  background: transparent;
+}
 footer.main-footer nav {
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 footer.main-footer nav ul {
   margin: 0;
@@ -196,7 +205,7 @@ footer.main-footer nav ul li a:hover {
   text-decoration: none;
 }
 footer.main-footer .social {
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 footer.main-footer .social .img-icon {
   margin-right: .5rem;
@@ -242,7 +251,6 @@ footer.main-footer .address h6 {
 }
 .home-grid-layout > * {
   position: relative;
-  border: 1px solid #d1d5d5;
 }
 .home-grid-layout .info {
   grid-column-start: 1;
@@ -274,9 +282,9 @@ footer.main-footer .address h6 {
   background: #4a4f54;
 }
 .home-grid-layout .cta-grid a {
-  padding: 2rem;
-  display: block;
-  font-size: 1.6em;
+  padding: 1rem;
+  display: inline-block;
+  font-size: 1.5rem;
   line-height: 1.6em;
   color: #ffffff;
   align-self: center;
@@ -287,10 +295,9 @@ footer.main-footer .address h6 {
 }
 .home-grid-layout .cta-grid a:after {
   margin-top: .5em;
-  margin-left: 15%;
   content: "";
   display: block;
-  width: 70%;
+  width: 100%;
   height: 5px;
   background: #ff6600;
 }
@@ -303,7 +310,7 @@ footer.main-footer .address h6 {
     grid-template-rows: 50% 50%;
   }
   .home-grid-layout .info h3 {
-    font-size: 20.555555555555554px;
+    font-size: 15.555555555555555px;
   }
   .home-grid-layout .info p {
     font-size: 23px;
@@ -348,7 +355,7 @@ footer.main-footer .address h6 {
 @media screen and (min-width: 576px) {
   .home-benefits .benefit:nth-child(n + 2):before {
     float: left;
-    margin-left: -4em;
+    margin-left: -3.4em;
     content: "";
     display: block;
     width: 2px;
@@ -391,8 +398,19 @@ footer.main-footer .address h6 {
   margin-bottom: 1.5em;
   height: 55px;
 }
+@media screen and (max-width: 575px) {
+  .home-benefits .benefit img {
+    height: 40px;
+  }
+}
+.home-benefits .btn-container {
+  margin-top: 60px;
+}
+.home-benefits .btn-container .btn {
+  margin-top: -10px;
+}
 #home .jumbotron {
-  background: #000000 url('img/rrvelarrevealimage010317003med.jpg') no-repeat top center;
+  background: #000000 url('img/rrvelar18my367glhdprlocationdynamic010317.jpg') no-repeat top center;
 }
 #program .jumbotron {
   background: #000000 url('img/rrvelar18my367glhdprlocationdynamic010317.jpg') no-repeat top center;
@@ -425,13 +443,13 @@ footer.main-footer .address h6 {
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .jumbotron h1 {
-    font-size: 35.333333333333336px;
+    font-size: 28px;
   }
 }
 @media screen and (min-width: 0) and (max-width: 768px) {
   .jumbotron h1 {
     width: 100%;
-    font-size: 26.5px;
+    font-size: 21px;
   }
 }
 /* --------------- NEWSROOM SPECIFIC --------------- */
@@ -490,7 +508,7 @@ footer.main-footer .address h6 {
   background: #d1d5d5;
 }
 .card-title {
-  font-size: 24px;
+  font-size: 18px;
 }
 .card-top {
   position: relative;

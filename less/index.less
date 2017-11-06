@@ -9,7 +9,6 @@
 
 	&>* {
 		position: relative;
-		border: 1px solid @ltGray;
 	}
 	.info {
 		grid-column-start: 1;
@@ -42,9 +41,9 @@
 		background: @dkGray;
 
 		a {
-			padding: 2rem;
-			display: block;
-			font-size: 1.6em;
+			padding: 1rem;
+			display: inline-block;
+			font-size: 1.5rem;
 			line-height: 1.6em;
 			color: @white;
 			align-self: center;
@@ -122,12 +121,13 @@
 		padding: 1rem 3rem;
 		width: calc(33% - 1rem);
 		text-align: center;
+		//border: 1px solid red;
 		border-bottom: 2px solid @ltGray;
 
 		@media screen and (min-width: 576px) {
 			&:nth-child(n + 2):before {
 				float: left;
-				margin-left: -4em;
+				margin-left: -3.4em;
 				content: "";
 				display: block;
 				width: 2px;
@@ -170,6 +170,17 @@
 		img {
 			margin-bottom: 1.5em;
 			height: 55px;
+
+			@media screen and (max-width: 575px) {
+				height: 40px;
+			}
+		}
+	}
+	.btn-container {
+		margin-top: @sectionMargin;
+
+		.btn {
+			margin-top: -10px;
 		}
 	}
 }

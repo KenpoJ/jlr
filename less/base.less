@@ -12,24 +12,32 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin-bottom: 1em;
+	margin-top: -10px;
+	margin-bottom: 40px;
 	font-family: 'LandRover', Helvetica, Arial, sans-serif;
 }
 h1 {
-	font-size: @h1size; // 15px to 53px ratio
+	font-size: @h1size; 
 	font-weight: normal;
 	line-height: 1.19em;
 }
 h2 {
-	font-size: @h2size; // 15px to 42px ratio
+	font-size: @h2size; 
 	text-align: center;
 }
 h3 {
-	font-size: @h3size; // 15px to 37px ratio
+	font-size: @h3size; 
 	text-align: center;
 }
 h4 {
-	font-size: @h4size; //15px to 35px ratio
+	font-size: @h4size;
+}
+h5 {
+	font-size: @h5size; 
+}
+h6 {
+	font-size: @h6size;
+
 }
 
 
@@ -39,8 +47,14 @@ section,
 .jumbotron {
 	margin-bottom: @sectionMargin; // 15px to 60px ratio
 }
+hr {
+	margin-top: 0;
+	margin-bottom: @sectionMargin;
+}
+.btn-container {
+	margin-top: -10px;
+}
 .btn-cta {
-	margin: @sectionMargin / 2 auto;
 	padding: 0;
 	font-size: @h2size / 1.5;
 	text-align: center;
@@ -66,7 +80,11 @@ section,
 	position: absolute;
 	top: 0;
 	opacity: .55;
-	background: @dkGray;
+	background: #4f5659;
+	background: -moz-linear-gradient(-45deg,  #4f5659 0%, #4f5659 70%, #ba906d 100%);
+	background: -webkit-linear-gradient(-45deg,  #4f5659 0%,#4f5659 70%,#ba906d 100%);
+	background: linear-gradient(135deg,  #4f5659 0%,#4f5659 70%,#ba906d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f5659', endColorstr='#ba906d',GradientType=1 );
 }
 img.float-right {
 	margin-left: 1.3em;

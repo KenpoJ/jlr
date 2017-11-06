@@ -1,0 +1,76 @@
+body {
+	font-family: 'Proxima Nova', Georgia, sans-serif;
+	font-size: @bodyCopy;
+	line-height: 1.3em;
+	color: rgb(74, 79, 84);
+}
+p {
+	strong {
+		font-family: 'proxima_nova_altbold', Georgia, sans-serif;
+		font-weight: bold;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 1em;
+	font-family: 'LandRover', Helvetica, Arial, sans-serif;
+}
+h1 {
+	font-size: @h1size; // 15px to 53px ratio
+	font-weight: normal;
+	line-height: 1.19em;
+}
+h2 {
+	font-size: @h2size; // 15px to 42px ratio
+	text-align: center;
+}
+h3 {
+	font-size: @h3size; // 15px to 37px ratio
+	text-align: center;
+}
+h4 {
+	font-size: @h4size; //15px to 35px ratio
+}
+
+
+/*--------------- LAYOUT ---------------*/
+
+section, 
+.jumbotron {
+	margin-bottom: @sectionMargin; // 15px to 60px ratio
+}
+.btn-cta {
+	margin: @sectionMargin / 2 auto;
+	padding: 0;
+	font-size: @h2size / 1.5;
+	text-align: center;
+	color: @dkGray;
+	.transition(all .2s ease-out);
+
+	&:hover {
+		color: @dkGray - #EEE;
+	}
+
+	&:after {
+		.thick-underline();
+	}
+}
+
+// GRID LAYOUT STYLES
+.grid-layout {
+	display: grid;
+}
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	opacity: .55;
+	background: @dkGray;
+}
+img.float-right {
+	margin-left: 1.3em;
+}
+.clear {
+	clear: both;
+}

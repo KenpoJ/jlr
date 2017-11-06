@@ -1,0 +1,66 @@
+/* --------------- NEWSROOM SPECIFIC --------------- */
+#newsroom {
+	#news {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+}
+.twitter-feed,
+.twitter-cta {
+	margin-bottom: 1.5em;
+	width: 387px;
+	height: 453px;
+}
+.twitter-feed {
+	margin-right: 1em;
+	border: 1px solid @ltGray;
+	@media screen and (max-width: 769px) {
+		margin-right: 0;
+	}
+}
+.twitter-cta {
+	color: @white;
+	background: @dkGray;
+}
+
+.card {
+	margin-right: 1em;
+	width: calc(33% - 1rem);
+	border: none;
+	.border-radius(0px);
+
+	&:last-child {
+		margin-right: 0;
+	}
+	@media screen and (max-width: 575px) {
+		width: 100%;
+	}
+	@media screen and (min-width: 576px) and (max-width: 767px) {
+		width: calc(50% - 1rem);
+	}
+}
+.news-card {
+	color: @white;
+	background: @dkGray;
+}
+.press-card {
+	background: @ltGray;
+}
+.card-title {
+	font-size: @h5size;
+}
+.card-top {
+	position: relative;
+}
+.category-marker {
+	margin-left: 2em;
+	padding: 1em 3em 1em 1em;
+	position: absolute;
+	bottom: 0;
+	color: @white;
+	background: @secondary;
+}
+.card-img-top {
+	.border-radius(0px);
+}
+}

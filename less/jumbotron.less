@@ -1,0 +1,56 @@
+// Banner images for each page
+#home {
+	.jumbotron {
+		background: @black url('img/rrvelarrevealimage010317003med.jpg') no-repeat top center;
+	}
+}
+#program {
+	.jumbotron {
+		background: @black url('img/rrvelar18my367glhdprlocationdynamic010317.jpg') no-repeat top center;
+	}
+}
+#portfolio {
+	.jumbotron {
+		background: @black url('img/img87531.jpg') no-repeat top center;
+	}
+}
+#newsroom {
+	.jumbotron {
+		height: 551px;
+		background: @black url('img/ostc_garage-banner.jpg') no-repeat top center;
+	}
+}
+
+.jumbotron {
+	margin-top: 5px;
+	padding-top: 100px;
+	height: 447px;
+	position: relative;
+
+	h1 {
+		width: 60%;
+		position: relative;
+		z-index: 1;
+		color: @white;
+
+		&.text-center {
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+	}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	h1 {
+		font-size: @h1size / 1.5;
+	}
+}
+@media screen and (min-width: 0) and (max-width: 768px) {
+	h1 {
+		width: 100%;
+		font-size: @h1size / 2;
+	}
+}
+
+}

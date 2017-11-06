@@ -1,36 +1,47 @@
 $(document).ready(function() {
 
-// MAIN NAVIGATION CURRENT HIGHLIGHTING
+//======================== MAIN NAVIGATION CURRENT HIGHLIGHTING
 var curPage = $('body').attr('id');
 switch(curPage) {
 	case 'home':
 		$('.navbar-collapse .nav-item').removeClass('active');
 		$('.navbar-collapse .nav-item[id="menu-home"]').addClass('active');
-		console.log('home');
+		//console.log('home');
 	break;
 	case 'program':
 		$('.navbar-collapse .nav-item').removeClass('active');
 		$('.navbar-collapse .nav-item[id="menu-program"]').addClass('active');
-		console.log('program');
+		//console.log('program');
 	break;
 	case 'portfolio':
 		$('.navbar-collapse .nav-item').removeClass('active');
 		$('.navbar-collapse .nav-item[id="menu-portfolio"]').addClass('active');
-		console.log('portfolio');
+		//console.log('portfolio');
 	break;
 	case 'newsroom':
 		$('.navbar-collapse .nav-item').removeClass('active');
 		$('.navbar-collapse .nav-item[id="menu-newsroom"]').addClass('active');
-		console.log('newsroom');
+		//console.log('newsroom');
 	break;
 	case 'blog':
 		$('.navbar-collapse .nav-item').removeClass('active');
 		$('.navbar-collapse .nav-item[id="menu-blog"]').addClass('active');
-		console.log('blog');
+		//console.log('blog');
 	break;
 }
 
-// GRID LAYOUT FOR HOMEPAGE GRID
+//============================ FOOTER LOGO HANDLING FOR SMALLER SIZE SCREENS
+var footerLogo = $('footer .logo');
+
+if($(window).width() > 576) {
+	footerLogo.removeClass('text-center');
+	footerLogo.addClass('text-right');
+} else {
+	footerLogo.removeClass('text-right');
+	footerLogo.addClass('text-center');
+}
+
+//============================= GRID LAYOUT FOR HOMEPAGE GRID
 var gridCont = $('.grid-container');
 var time;
 
@@ -49,14 +60,32 @@ function setHeight() {
 setHeight();
 // END GRID LAYOUT SCRIPT
 
-var footerLogo = $('footer .logo');
+//============================== PORTFOLIO DISPLAY BEHAVIORS
+var partner = $('.partner');
 
-if($(window).width() > 576) {
-	footerLogo.removeClass('text-center');
-	footerLogo.addClass('text-right');
-} else {
-	footerLogo.removeClass('text-right');
-	footerLogo.addClass('text-center');
-}
+partner.addClass('minimized');
+
+partner.hover(function() {
+	$(this).toggleClass('hover');
+});
+
+partner.click(function(e) {
+	e.preventDefault();
+	partner.removeClass('maximized');
+	partner.find('.partner-desc-2').addClass('hidden');
+	partner.find('.partner-desc').removeClass('hidden');
+
+	$(this).addClass('maximized');
+	$(this).find('.partner-desc-2').removeClass('hidden');
+	$(this).find('.partner-desc').addClass('hidden');
+})
+
 
 })
+
+
+
+
+
+
+

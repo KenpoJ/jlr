@@ -38,6 +38,12 @@
 	@media screen and (min-width: 576px) and (max-width: 767px) {
 		width: calc(50% - 1rem);
 	}
+	a {
+		color: inherit;
+		 &:hover {
+		 	color: inherit;
+		 }
+	}
 }
 .news-card {
 	color: @white;
@@ -52,6 +58,9 @@
 .card-top {
 	position: relative;
 }
+.card-text {
+	line-height: 1.8em;
+}
 .category-marker {
 	margin-left: 2em;
 	padding: 1em 3em 1em 1em;
@@ -62,5 +71,4 @@
 }
 .card-img-top {
 	.border-radius(0px);
-}
 }

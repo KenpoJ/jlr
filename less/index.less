@@ -1,3 +1,11 @@
+#home {
+	.btn-cta {
+		font-size: @h2size / 1.5;
+		text-align: center;
+		color: @dkGray;
+	}
+}
+
 .home-grid-layout { // 1025px - 1200px the layout is not evenly laid out
 
 	// ITEMS ARE 334x282 PIXELS AT THE LARGEST SIZE
@@ -124,10 +132,10 @@
 		//border: 1px solid red;
 		border-bottom: 2px solid @ltGray;
 
-		@media screen and (min-width: 576px) {
+		@media screen and (min-width: 1024px) {
 			&:nth-child(n + 2):before {
 				float: left;
-				margin-left: -3.4em;
+				margin-left: -4em;
 				content: "";
 				display: block;
 				width: 2px;
@@ -147,7 +155,29 @@
 				border-bottom: none;
 			}
 		}
-		
+		@media screen and (min-width: 576px) and (max-width: 1023px) {
+			&:nth-child(n + 2):before {
+				float: left;
+				margin-left: -3.8em;
+				content: "";
+				display: block;
+				width: 2px;
+				height: 100%;
+				background: @ltGray;
+			}
+			&:nth-child(4):before {
+				float: left;
+				margin-left: -3.8em;
+				content: "";
+				display: block;
+				width: 2px;
+				height: 100%;
+				background: @white;
+			}
+			&:nth-child(n + 4) {
+				border-bottom: none;
+			}
+		}
 		@media screen and (max-width: 575px) {
 			padding: .5rem 1.5rem;
 			width: 50%;

@@ -42,14 +42,19 @@ h6 {
 
 
 /*--------------- LAYOUT ---------------*/
-
+.container {
+	max-width: 1246px;
+}
 section, 
 .jumbotron {
-	margin-bottom: @sectionMargin; // 15px to 60px ratio
+	margin-bottom: @sectionMargin;
 }
 hr {
 	margin-top: 0;
 	margin-bottom: @sectionMargin;
+	height: 3px;
+	border: none;
+	background: @ltGray;
 }
 .btn-container {
 	margin-top: -10px;

@@ -23,6 +23,11 @@
 	background: @dkGray;
 }
 
+.pagination-container {
+	padding-top: @sectionMargin / 2;
+	width: 100%;
+}
+
 .card {
 	margin-right: 1em;
 	width: calc(33% - 1rem);
@@ -68,7 +73,15 @@
 	bottom: 0;
 	color: @white;
 	background: @secondary;
+	-webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
 }
 .card-img-top {
 	.border-radius(0px);
+}
+
+#contact {
+	.lead {
+		text-align: center;
+	}
 }

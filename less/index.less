@@ -27,7 +27,7 @@
 		color: @white;
 		background: @dkGray;
 
-		h3 {
+		h2 {
 			padding: 2rem 2rem 0 2rem;
 			text-align: left;
 			text-transform: uppercase;
@@ -35,6 +35,7 @@
 		p {
 			padding: 0 2rem 2rem 2rem;
 			display: block;
+			font-family: 'proxima_nova_ltthin', sans-serif;
 			font-size: 24px;
 			line-height: 1.4em;
 		}
@@ -46,20 +47,30 @@
 		background: url('img/jagipaceconceptinterior150317066-med.jpg') no-repeat top center;
 	}
 	.cta-grid {
+		padding-left: 1em;
 		background: @dkGray;
 
+		h3 {
+			text-align: left;
+		}
+
 		a {
-			padding: 1rem;
-			display: inline-block;
+			margin-top: 1em;
+			padding-bottom: .05em;
 			font-size: 1.5rem;
-			line-height: 1.6em;
+			line-height: 1.9em;
 			color: @white;
 			align-self: center;
 			.transition(all .2s ease-out);
+			border-bottom: 5px solid @secondary;
+			//text-decoration: underline;
+			//text-decoration-color: @secondary;
+			//text-decoration-width: 5px;
 
-			&:after {
-				margin-top: .5em;
-				.thick-underline();
+			&:before {
+				content: "";
+				display: block;
+				height: 1em;
 			}
 			
 			&:hover {
@@ -122,6 +133,7 @@
 
 .home-benefits {
 	.d-flex {
+		margin-top: -30px;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}

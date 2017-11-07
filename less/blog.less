@@ -1,0 +1,34 @@
+article {
+	margin-bottom: @sectionMargin / 2;
+	padding-bottom: @sectionMargin / 4;
+	border-bottom: 1px solid @ltGray;
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	h3 {
+		text-align: left;
+		a {
+			padding-bottom: .05em;
+			line-height: 1.75em;
+			color: inherit;
+			border-bottom: 5px solid @secondary;
+
+			&:hover {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+	}
+	aside {
+		margin-right: 1em;
+		padding: 1em;
+		color: @white;
+		background: @mdGray + #333;
+
+		.date {
+			color: @dkGray;
+		}
+	}
+}

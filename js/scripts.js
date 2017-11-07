@@ -65,11 +65,23 @@ var partner = $('.partner');
 
 partner.addClass('minimized');
 
-partner.hover(function() {
-	$(this).toggleClass('hover');
+partner.mouseenter(function() {
+	//$(this).toggleClass('hover');
+	partner.removeClass('maximized');
+	partner.find('.partner-desc-2').addClass('hidden');
+	partner.find('.partner-desc').removeClass('hidden');
+
+	$(this).addClass('maximized');
+	$(this).find('.partner-desc-2').removeClass('hidden');
+	$(this).find('.partner-desc').addClass('hidden');
+});
+partner.mouseleave(function() {
+	partner.removeClass('maximized');
+	partner.find('.partner-desc-2').addClass('hidden');
+	partner.find('.partner-desc').removeClass('hidden');
 });
 
-partner.click(function(e) {
+/*partner.click(function(e) {
 	e.preventDefault();
 	partner.removeClass('maximized');
 	partner.find('.partner-desc-2').addClass('hidden');
@@ -78,7 +90,7 @@ partner.click(function(e) {
 	$(this).addClass('maximized');
 	$(this).find('.partner-desc-2').removeClass('hidden');
 	$(this).find('.partner-desc').addClass('hidden');
-})
+})*/
 
 
 })

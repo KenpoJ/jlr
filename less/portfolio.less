@@ -1,26 +1,27 @@
 /* --------------- PORTFOLIO SPECIFIC --------------- */
 .partner {
+	height: auto;
 	.transition(all .15s ease-out);
 
 	&.hover {
 		cursor: pointer;
-		background: @ltGray;
+		background: lighten(@ltGray, 10%);
 	}
 	&.minimized {
-		height: 70px;
+		color: lighten(@dkGray, 20%);
 	}
 	&.maximized {
-		height: auto;
+		color: @dkGray;
 
 		.partner-main {
-			border-top: 1px solid @secondary;
-			border-bottom: 1px solid @secondary;
+			//border-top: 1px solid @secondary;
+			//border-bottom: 1px solid @secondary;
 		}
 	}
 }
 .partner-main {
-	padding-top: .5em;
-	padding-bottom: .5em;
+	padding: 22px .7em 0 0;
+	height: 100%;
 	border-top: 1px solid @ltGray;
 
 	&.row {
@@ -28,7 +29,7 @@
 	}
 
 	div:nth-child(2) {
-		text-align: right;
+		//text-align: right;
 	}
 	.dev-logo {
 		width: 30px;
@@ -44,11 +45,24 @@
 	}
 }
 .partner-logo {
-	margin-bottom: 1em;
+	margin-right: 13px;
+
+	@media screen and (max-width: 575px) {
+		margin-bottom: 1em;
+	}
+	
 }
 .partner-name {
 	text-transform: uppercase;
+
+	@media screen and (max-width: 575px) {
+		font-size: 1em;
+	}
+	@media screen and (min-width: 576px) and (max-width: 1023px) {
+		font-size: .8em;
+	}
 }
 .partner-location {
+	margin-left: 50px;
 	font-family: 'proxima_nova_altbold';
 }

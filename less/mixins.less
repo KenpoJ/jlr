@@ -26,6 +26,10 @@
 	height: 5px;
 	background: @secondary;
 }
+.thick-underline-inline() {
+	padding-bottom: .05em;
+	border-bottom: 5px solid @secondary;
+}
 
 .placeholder(@color) {
 	&::-webkit-input-placeholder {
@@ -37,4 +41,10 @@
 	&::-moz-placeholder {
 		color: @color;
 	}
+}
+.dark-form-input {
+	color: @white;
+	background-color: @dkGray + #333;
+	border: none;
+	.placeholder(@white);
 }

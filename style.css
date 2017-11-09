@@ -1,15 +1,28 @@
-/*--------------- MIXINS & IMPORTS ---------------*/
-@import "fonts/fonts.css";
-/*--------------- MIXINS & IMPORTS ---------------*/
 /*----- VARIABLES -----*/
+@import "fonts/fonts.css";
+/*----- VARIABLES -----*/
+.dark-form-input {
+  color: #ffffff;
+  background-color: #7d8287;
+  border: none;
+}
+.dark-form-input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.dark-form-input:-moz-placeholder {
+  color: #ffffff;
+}
+.dark-form-input::-moz-placeholder {
+  color: #ffffff;
+}
 body {
-  font-family: 'Proxima Nova', Georgia, sans-serif;
+  font-family: 'proxima_nova_ltthin', Georgia, sans-serif;
   font-size: 15px;
   line-height: 1.3em;
   color: #4a4f54;
 }
 p strong {
-  font-family: 'proxima_nova_altbold', Georgia, sans-serif;
+  font-family: 'Proxima Nova', Georgia, sans-serif;
   font-weight: bold;
 }
 h1,
@@ -64,20 +77,19 @@ hr {
 }
 .btn-cta {
   padding: 0;
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+  font-size: 20px;
+  color: inherit;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
+  padding-bottom: .05em;
+  border-bottom: 5px solid #ff6600;
+  border-radius: 0;
 }
 .btn-cta:hover {
   color: #000000;
-}
-.btn-cta:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 5px;
-  background: #ff6600;
 }
 .grid-layout {
   display: grid;
@@ -138,6 +150,7 @@ header .logo-container img {
 .navbar .navbar-nav li {
   padding: 0 2rem;
   height: 100%;
+  font-family: 'Proxima Nova', Georgia, sans-serif;
   font-weight: normal;
   border-left: 1px solid #d1d5d5;
 }
@@ -161,7 +174,10 @@ footer.main-footer {
   background: #4a4f54;
 }
 footer.main-footer img {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
+}
+footer.main-footer img.logo {
+  width: 222px;
 }
 footer.main-footer h4 {
   font-size: 1.7rem;
@@ -297,6 +313,9 @@ footer.main-footer .address h6 {
 .home-grid-layout .img-two {
   background: url('img/jagipaceconceptinterior150317066-med.jpg') no-repeat top center;
 }
+.home-grid-layout .img-three {
+  background: url('img/incubator-12.png') no-repeat top center;
+}
 .home-grid-layout .cta-grid {
   padding-left: 1em;
   background: #4a4f54;
@@ -305,8 +324,6 @@ footer.main-footer .address h6 {
   text-align: left;
 }
 .home-grid-layout .cta-grid a {
-  margin-top: 1em;
-  padding-bottom: .05em;
   font-size: 1.5rem;
   line-height: 1.9em;
   color: #ffffff;
@@ -315,6 +332,7 @@ footer.main-footer .address h6 {
   -moz-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
+  padding-bottom: .05em;
   border-bottom: 5px solid #ff6600;
 }
 .home-grid-layout .cta-grid a:before {
@@ -455,7 +473,7 @@ footer.main-footer .address h6 {
   margin-top: -10px;
 }
 #home .jumbotron {
-  background: #000000 url('img/rrvelar18my367glhdprlocationdynamic010317.jpg') no-repeat top center;
+  background: #000000 url('img/rrvelarrevealimage010317003.jpg') no-repeat top center;
 }
 #program .jumbotron {
   background: #000000 url('img/rrvelar18my367glhdprlocationdynamic010317.jpg') no-repeat top center;
@@ -463,9 +481,16 @@ footer.main-footer .address h6 {
 #portfolio .jumbotron {
   background: #000000 url('img/img87531.jpg') no-repeat top center;
 }
+#blog .jumbotron {
+  background: #000000 url('img/jagipaceconceptstatic150317048.jpg') no-repeat top center;
+}
 #newsroom .jumbotron {
   height: 551px;
   background: #000000 url('img/ostc_garage-banner.jpg') no-repeat top center;
+}
+#contact .jumbotron {
+  height: 551px;
+  background: #000000 url('img/IMG_6024.jpg') no-repeat top center;
 }
 .jumbotron {
   padding-top: 100px;
@@ -661,7 +686,7 @@ footer.main-footer .address h6 {
   font-size: 24px;
   line-height: 1.2em;
 }
-.description picture img {
+.description img {
   margin-bottom: 1.3em;
 }
 @media screen and (max-width: 575px) {
@@ -676,6 +701,9 @@ footer.main-footer .address h6 {
     margin: 0 auto 1em auto;
   }
 }
+.testimonials {
+  margin-bottom: 80px;
+}
 .testimonials .row > div {
   background: #4a4f54;
 }
@@ -683,9 +711,14 @@ footer.main-footer .address h6 {
   text-align: left;
   background: black;
 }
+.testimonials .row > div.img-container.paola {
+  background: #000000 url('img/Paola-Moretto.jpg') no-repeat 50% 50%;
+}
 .testimonials .blockquote {
-  margin-top: 1.3rem;
+  margin: 45px;
+  font-size: 18px;
   font-style: italic;
+  line-height: 1.4em;
   color: #ffffff;
 }
 .testimonials .blockquote-footer:before {
@@ -702,6 +735,7 @@ footer.main-footer .address h6 {
   }
   .testimonials .img-container {
     padding-top: 1rem;
+    min-height: 321px;
   }
   .testimonials .blockquote {
     font-size: 1rem;
@@ -747,4 +781,30 @@ article aside {
 }
 article aside .date {
   color: #4a4f54;
+}
+.form-container {
+  margin-top: -60px;
+  padding: 20px 0 60px;
+  background: #4a4f54;
+}
+.form-container input,
+.form-container textarea {
+  color: #ffffff;
+  background-color: #7d8287;
+  border: none;
+}
+.form-container input::-webkit-input-placeholder,
+.form-container textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.form-container input:-moz-placeholder,
+.form-container textarea:-moz-placeholder {
+  color: #ffffff;
+}
+.form-container input::-moz-placeholder,
+.form-container textarea::-moz-placeholder {
+  color: #ffffff;
+}
+.form-container button {
+  margin-top: 40px;
 }

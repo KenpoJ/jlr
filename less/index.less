@@ -46,6 +46,9 @@
 	.img-two {
 		background: url('img/jagipaceconceptinterior150317066-med.jpg') no-repeat top center;
 	}
+	.img-three {
+		background: url('img/incubator-12.png') no-repeat top center;
+	}
 	.cta-grid {
 		padding-left: 1em;
 		background: @dkGray;
@@ -55,17 +58,12 @@
 		}
 
 		a {
-			margin-top: 1em;
-			padding-bottom: .05em;
 			font-size: 1.5rem;
 			line-height: 1.9em;
 			color: @white;
 			align-self: center;
 			.transition(all .2s ease-out);
-			border-bottom: 5px solid @secondary;
-			//text-decoration: underline;
-			//text-decoration-color: @secondary;
-			//text-decoration-width: 5px;
+			.thick-underline-inline();
 
 			&:before {
 				content: "";

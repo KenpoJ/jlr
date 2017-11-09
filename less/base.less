@@ -1,12 +1,12 @@
 body {
-	font-family: 'Proxima Nova', Georgia, sans-serif;
+	font-family: 'proxima_nova_ltthin', Georgia, sans-serif;
 	font-size: @bodyCopy;
 	line-height: 1.3em;
 	color: rgb(74, 79, 84);
 }
 p {
 	strong {
-		font-family: 'proxima_nova_altbold', Georgia, sans-serif;
+		font-family: 'Proxima Nova', Georgia, sans-serif;
 		font-weight: bold;
 	}
 }
@@ -61,14 +61,19 @@ hr {
 }
 .btn-cta {
 	padding: 0;
+	font-family: 'Proxima Nova', Georgia, sans-serif;
+	font-size: @h4size;
+	color: inherit;
 	.transition(all .2s ease-out);
+	.thick-underline-inline();
+	border-radius: 0;
 
 	&:hover {
 		color: @dkGray - #EEE;
 	}
 
 	&:after {
-		.thick-underline();
+		//.thick-underline();
 	}
 }
 

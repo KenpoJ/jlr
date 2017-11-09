@@ -5,7 +5,11 @@ footer.main-footer {
 	background: @dkGray;
 
 	img {
-		margin-bottom: @sectionMargin / 2;
+		margin-bottom: @sectionMargin;
+
+		&.logo {
+			width: 222px;
+		}
 	}
 
 	h4 {
@@ -16,10 +20,7 @@ footer.main-footer {
 		margin-bottom: @sectionMargin / 2;
 
 		input.form-control-sm {
-			color: @white;
-			background-color: @dkGray + #333;
-			border: none;
-			.placeholder(@white);
+			.dark-form-input();
 		}
 		.btn-submit-footer {
 			margin-left: 1em;

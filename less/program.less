@@ -5,7 +5,7 @@
 		font-size: 24px;
 		line-height: 1.2em;
 	}
-	picture img {
+	img {
 		margin-bottom: 1.3em;
 	}
 	@media screen and (max-width: 575px) {
@@ -22,6 +22,7 @@
 	}
 }
 .testimonials {
+	margin-bottom: @sectionMargin + 20px;
 	.row > div {
 		//border: 1px solid red;
 		background: @dkGray;
@@ -29,11 +30,17 @@
 		&.img-container {
 			text-align: left;
 			background: black;
+
+			&.paola {
+				background: black url('img/Paola-Moretto.jpg') no-repeat 50% 50%;
+			}
 		}
 	}
 	.blockquote {
-		margin-top: 1.3rem;
+		margin: 45px;
+		font-size: 18px;
 		font-style: italic;
+		line-height: 1.4em;
 		color: @white;
 	}
 	.blockquote-footer {
@@ -52,6 +59,7 @@
 		}
 		.img-container {
 			padding-top: 1rem;
+			min-height: 321px;
 		}
 		.blockquote {
 			font-size: 1rem;

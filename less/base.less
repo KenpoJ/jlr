@@ -48,7 +48,17 @@ h5 {
 }
 h6 {
 	font-size: @h6size;
+}
+@media screen and (min-width: 0px) and (max-width: 576px) {
+	h1 { font-size: @h1size * .75 }
+	h2 { font-size: @h2size * .70 }
+	h3 { font-size: @h3size * .65 }
+}
 
+
+/*--------------- FORM STYLES ---------------*/
+.form-control {
+	.dark-form-input();
 }
 
 
@@ -74,26 +84,30 @@ hr {
 	border: none;
 	background: @ltGray;
 }
+
 .btn-container {
 	margin-top: -10px;
-}
-.btn-cta {
-	padding: 0;
-	font-family: 'Proxima Nova', Georgia, sans-serif;
-	font-size: @h4size;
-	color: inherit;
-	.transition(all .2s ease-out);
-	.thick-underline-inline();
-	border-radius: 0;
+	text-align: center;
 
-	&:hover {
-		color: @dkGray - #EEE;
-	}
+	.btn-cta {
+		padding: 0 0 .2em 0;
+		font-family: 'Proxima Nova', Georgia, sans-serif;
+		font-size: @h4size;
+		color: inherit;
+		.transition(all .2s ease-out);
+		.thick-underline-inline();
+		border-radius: 0;
 
-	&:after {
-		//.thick-underline();
+		&:hover {
+			color: @dkGray - #EEE;
+		}
+
+		&:after {
+			//.thick-underline();
+		}
 	}
 }
+
 .btn-white-border {
 	font-size: 1.5em;
 	color: @secondary;

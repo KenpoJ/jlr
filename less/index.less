@@ -1,6 +1,6 @@
 #home {
 	.btn-cta {
-		font-size: @h2size / 1.5;
+		font-size: @h2size;
 		text-align: center;
 		color: @dkGray;
 	}
@@ -28,14 +28,14 @@
 		background: @dkGray;
 
 		h2 {
-			padding: 2rem 2rem 0 2rem;
+			padding: 50px 2rem 0 50px;
 			text-align: left;
 			text-transform: uppercase;
 		}
 		p {
-			padding: 0 2rem 2rem 2rem;
+			padding: 0 50px 50px 50px;
 			display: block;
-			font-family: 'Proxima Nova Light Thin', sans-serif;
+			font-family: 'Proxima Nova', sans-serif;
 			font-size: 24px;
 			line-height: 1.4em;
 		}
@@ -50,26 +50,22 @@
 		background: url('img/incubator-12.png') no-repeat top center;
 	}
 	.cta-grid {
-		padding-left: 1em;
+		padding-left: 30px;
 		background: @dkGray;
 
 		h3 {
 			text-align: left;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 
 		a {
 			font-size: 1.5rem;
 			line-height: 1.9em;
 			color: @white;
-			align-self: center;
 			.transition(all .2s ease-out);
 			.thick-underline-inline();
-
-			&:before {
-				content: "";
-				display: block;
-				height: 1em;
-			}
 			
 			&:hover {
 				text-decoration: none;
@@ -116,10 +112,14 @@
 				font-size: 15px;
 			}
 		}
-		.img-two {
-			//background: url('img/jagipaceconceptinterior150317066-sm.jpg') no-repeat 0 0;
+		.img-one,
+		.img-two,
+		.img-three {
+			background-size: 100%;
 		}
 		.cta-grid {
+			padding-left: 15px;
+
 			a {
 				padding-top: 1em;
 				font-size: 1rem;
@@ -135,12 +135,38 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
+	h2 {
+		margin-bottom: 65px;
+	}
+	@media screen and (min-width: 0px) and (max-width: 575px) {
+		h2 {
+			text-align: left;
+		}
+	}
 	.benefit {
 		padding: 1rem 3rem;
 		width: calc(33% - 1rem);
 		text-align: center;
 		//border: 1px solid red;
 		border-bottom: 2px solid @ltGray;
+
+		h4 {
+			margin-bottom: 15px;
+		}
+		p {
+			margin-left: 50%;
+			width: 190px;
+			transform: translateX(-50%);
+		}
+
+		img {
+			margin-bottom: 1.5em;
+			height: 55px;
+
+			@media screen and (max-width: 575px) {
+				height: 40px;
+			}
+		}
 
 		@media screen and (min-width: 1024px) {
 			&:nth-child(n + 2):before {
@@ -163,6 +189,9 @@
 			}
 			&:nth-child(n + 4) {
 				border-bottom: none;
+			}
+			img {
+				margin-top: .5rem;
 			}
 		}
 		@media screen and (min-width: 576px) and (max-width: 1023px) {
@@ -188,7 +217,7 @@
 				border-bottom: none;
 			}
 		}
-		@media screen and (max-width: 575px) {
+		@media screen and (min-width: 0px) and (max-width: 575px) {
 			padding: .5rem 1.5rem;
 			width: 50%;
 			border-bottom: 2px solid @ltGray;
@@ -205,14 +234,8 @@
 			&:nth-child(n + 5) {
 				border-bottom: none;
 			}
-		}
-
-		img {
-			margin-bottom: 1.5em;
-			height: 55px;
-
-			@media screen and (max-width: 575px) {
-				height: 40px;
+			img {
+				margin-top: 1.7rem;
 			}
 		}
 	}

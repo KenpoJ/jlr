@@ -13,26 +13,30 @@ footer.main-footer {
 	}
 
 	h4 {
+		font-family: 'Proxima Nova Light Thin', sans-serif;
 		font-size: 1.7rem;
 		font-weight: normal;
 	}
 	form {
 		margin-bottom: @sectionMargin / 2;
 
-		input.form-control-sm {
-			.dark-form-input();
-		}
 		.btn-submit-footer {
 			margin-left: 1em;
 			width: 50%;
 			color: @white;
-			//border: 1px solid @ltGray;
+			border: 3px solid @ltGray;
 			background: transparent;
 			border-radius: 0;
-			box-shadow: inset 0 0 0 1px @ltGray;
+			//box-shadow: inset 0 0 0 3px @ltGray;
 
 			img {
 				margin-bottom: 0;
+			}
+			@media screen and (min-width: 0px) and (max-width: 576px) {
+				img {
+					margin-left: -.2em;
+					width: 200%;
+				}
 			}
 		}
 	}

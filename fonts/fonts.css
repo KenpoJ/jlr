@@ -3,7 +3,7 @@
 
 
 @font-face {
-    font-family: 'proxima_nova_altblack';
+    font-family: 'Proxima Nova Black';
     src: url('Mark Simonson - Proxima Nova Alt Black-webfont.eot');
     src: url('Mark Simonson - Proxima Nova Alt Black-webfont.eot?#iefix') format('embedded-opentype'),
          url('Mark Simonson - Proxima Nova Alt Black-webfont.woff2') format('woff2'),
@@ -16,7 +16,7 @@
 }
 
 @font-face {
-    font-family: 'proxima_nova_altbold';
+    font-family: 'Proxima Nova Bold';
     src: url('Mark Simonson - Proxima Nova Alt Bold-webfont.eot');
     src: url('Mark Simonson - Proxima Nova Alt Bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('Mark Simonson - Proxima Nova Alt Bold-webfont.woff2') format('woff2'),
@@ -47,7 +47,7 @@
 
 
 @font-face {
-    font-family: 'proxima_nova_scosfthin';
+    font-family: 'Proxima Nova SC Thin';
     src: url('Mark Simonson - Proxima Nova ScOsf Thin-webfont.eot');
     src: url('Mark Simonson - Proxima Nova ScOsf Thin-webfont.eot?#iefix') format('embedded-opentype'),
          url('Mark Simonson - Proxima Nova ScOsf Thin-webfont.woff2') format('woff2'),
@@ -62,7 +62,7 @@
 
 
 @font-face {
-    font-family: 'proxima_nova_ltsemibold';
+    font-family: 'Proxima Nova Light Semibold';
     src: url('Mark Simonson - Proxima Nova Semibold-webfont.eot');
     src: url('Mark Simonson - Proxima Nova Semibold-webfont.eot?#iefix') format('embedded-opentype'),
          url('Mark Simonson - Proxima Nova Semibold-webfont.woff2') format('woff2'),
@@ -75,7 +75,7 @@
 }
 
 @font-face {
-    font-family: 'proxima_nova_ltthin';
+    font-family: 'Proxima Nova Light Thin';
     src: url('Mark Simonson - Proxima Nova Thin-webfont.eot');
     src: url('Mark Simonson - Proxima Nova Thin-webfont.eot?#iefix') format('embedded-opentype'),
          url('Mark Simonson - Proxima Nova Thin-webfont.woff') format('woff'),

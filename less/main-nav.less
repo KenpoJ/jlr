@@ -31,7 +31,7 @@
 		li {
 			padding: 0 2rem;
 			height: 100%;
-			font-family: 'Proxima Nova', Georgia, sans-serif;
+			font-family: 'Proxima Nova', sans-serif;
 			font-weight: normal;
 			border-left: 1px solid @ltGray;
 
@@ -40,10 +40,11 @@
 				display: block;
 				height: 100%;
 				font-size: 15px;
+				border-bottom: none;
 			}
 			&.active {
 				a {
-					font-weight: bold;
+					font-family: 'Proxima Nova Bold', sans-serif;
 					box-shadow: inset 0 -3px 0 @secondary;
 				}
 			}
@@ -63,7 +64,7 @@
 			background: @dkGray;
 			.nav-item {
 				.nav-link {
-					font-family: 'proxima_nova_ltthin', sans-serif;
+					font-family: 'Proxima Nova Light Thin', sans-serif;
 					color: @white;
 				}
 				&.active {
@@ -71,6 +72,27 @@
 					.nav-link {
 						box-shadow: none;
 					}
+				}
+			}
+		}
+		.navbar-toggler {
+			.close {
+				font-weight: bold;
+				color: @secondary;
+			}
+			&.collapsed {
+				display: inline;
+				
+				.close {
+					display: none;
+				}
+			}
+			&:not(.collapsed) {
+				.close {
+					display: inline;
+				}
+				.navbar-toggler-icon {
+					display: none;
 				}
 			}
 		}

@@ -1,5 +1,5 @@
 body {
-	font-family: 'proxima_nova_ltthin', Georgia, sans-serif;
+	font-family: 'Proxima Nova Light Thin', Georgia, sans-serif;
 	font-size: @bodyCopy;
 	line-height: 1.3em;
 	color: rgb(74, 79, 84);
@@ -8,6 +8,17 @@ p {
 	strong {
 		font-family: 'Proxima Nova', Georgia, sans-serif;
 		font-weight: bold;
+	}
+}
+a {
+	color: @dkGray;
+	border-bottom: 1px solid @white;
+	.transition(all .2s ease-out);
+
+	&:hover {
+		color: @black;
+		text-decoration: none;
+		border-bottom: 1px solid @dkGray;
 	}
 }
 
@@ -49,6 +60,13 @@ section,
 .jumbotron {
 	margin-bottom: @sectionMargin;
 }
+.page-top {
+	margin-bottom: 0;
+	padding: 80px 0;
+}
+.bg-gray {
+	background: lighten(@ltGray, 10%);
+}
 hr {
 	margin-top: 0;
 	margin-bottom: @sectionMargin;
@@ -75,6 +93,63 @@ hr {
 	&:after {
 		//.thick-underline();
 	}
+}
+.btn-white-border {
+	font-size: 1.5em;
+	color: @secondary;
+	border: 3px solid @white;
+	background: transparent;
+	border-radius: 0;
+	//box-shadow: inset 0 0 0 3px @white;
+
+	img {
+		margin-left: .5em;
+	}
+}
+
+// VERTICLA DIVIDER FOR COLUMNS
+.vertical-divider {
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: 50%;
+	line-height: 0;
+	text-align:center;
+	text-transform: uppercase;
+	transform: translateX(-50%);
+}
+.vertical-divider:before, 
+.vertical-divider:after {
+	position: absolute;
+	left: 50%;
+	content: '';
+	z-index: 9;
+	border-left: 2px solid rgba(34,36,38,.15);
+	border-right: 2px solid rgba(255,255,255,.1);
+	width: 0;
+	height: calc(100% - 1rem);
+}
+.row-divided > .vertical-divider {
+	height: calc(50% - 1rem);    
+}
+.vertical-divider:before {
+	top: -100%;
+}
+.vertical-divider:after {
+	top: auto;
+	bottom: 0;
+}
+.row-divided {
+	position:relative;
+}
+.row-divided > [class^="col-"],
+.row-divided > [class*=" col-"] {
+	padding-left: 30px;  /* gutter width (give a little extra room) 2x default */
+	padding-right: 30px; /* gutter width (give a little extra room) 2x default */
 }
 
 // GRID LAYOUT STYLES

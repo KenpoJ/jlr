@@ -1,0 +1,12 @@
+header {
+  margin-bottom: 0;
+  max-height: 81px;
+}
+header .logo-container {
+  margin-top: -5px;
+  padding: 0;
+  text-align: center;
+}
+header .logo-container img {
+  width: 120px;
+}

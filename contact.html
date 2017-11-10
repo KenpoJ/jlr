@@ -19,8 +19,9 @@
 <header>
 	<nav class="navbar navbar-light navbar-expand-lg bg-white justify-content-between">
 		<div class="container">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
+				<span class="close">X</span>
 			</button>
 
 			<a class="navbar-brand" href="index.html">
@@ -31,7 +32,7 @@
 
 			<div class="collapse navbar-collapse" id="main-navigation">
 				<ul class="navbar-nav ml-auto">
-					<li id="menu-home" class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+					<li id="menu-home" class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 					<li id="menu-program" class="nav-item"><a class="nav-link" href="program.html">Program</a></li>
 					<li id="menu-portfolio" class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
 					<li id="menu-newsroom" class="nav-item"><a class="nav-link" href="news.html">Newsroom</a></li>
@@ -70,10 +71,36 @@
 				<label for="subject"></label>
 				<textarea name="subject" class="form-control" placeholder="Your message"></textarea>
 			</div>
-			<button type="submit" class="btn btn-text">Submit</button>
+			<button type="submit" class="btn btn-text btn-white-border">Submit <img src="img/right-arrow-orange.png"></button>
 		</form>
 
 	</div>
+</section>
+
+<section class="contact-methods">
+	<div class="container">
+		<div class="row row-divided">
+			<div class="col-6">
+				<p class="text-center"><img src="img/email-icon.svg"> incubator@jaguarlandrover.com</p>
+			</div>
+			<div class="vertical-divider"></div>
+			<div class="col-6">
+				<div class="row justify-content-center">
+					<div class="col-4 text-right">
+						<img src="img/location-icon.svg">
+					</div>
+					<div class="col-4">
+						<p class="text-left"> 1450 NW 18th Ave<br>Portland, OR 97209</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="map-container">
+	<img src="img/map-image.png">
 </section>
 
 <footer class="main-footer">
@@ -111,7 +138,7 @@
 					</div>
 				</div>
 				<div class="address">
-					<h6>Oregon Software Technology Center</h6>
+					<h6>Jaguar Land Rover Tech Incubator</h6>
 					<p>1450 NW 18th Ave<br>
 					Portland, OR 97209</p>
 				</div>

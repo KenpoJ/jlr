@@ -4,28 +4,28 @@ $(document).ready(function() {
 var curPage = $('body').attr('id');
 switch(curPage) {
 	case 'home':
-		$('.navbar-collapse .nav-item').removeClass('active');
-		$('.navbar-collapse .nav-item[id="menu-home"]').addClass('active');
+		$('.navbar-collapse .nav-item').removeClass('current-menu-item');
+		$('.navbar-collapse .nav-item[id="menu-home"]').addClass('current-menu-item');
 		//console.log('home');
 	break;
 	case 'program':
-		$('.navbar-collapse .nav-item').removeClass('active');
-		$('.navbar-collapse .nav-item[id="menu-program"]').addClass('active');
+		$('.navbar-collapse .nav-item').removeClass('current-menu-item');
+		$('.navbar-collapse .nav-item[id="menu-program"]').addClass('current-menu-item');
 		//console.log('program');
 	break;
 	case 'portfolio':
-		$('.navbar-collapse .nav-item').removeClass('active');
-		$('.navbar-collapse .nav-item[id="menu-portfolio"]').addClass('active');
+		$('.navbar-collapse .nav-item').removeClass('current-menu-item');
+		$('.navbar-collapse .nav-item[id="menu-portfolio"]').addClass('current-menu-item');
 		//console.log('portfolio');
 	break;
 	case 'newsroom':
-		$('.navbar-collapse .nav-item').removeClass('active');
-		$('.navbar-collapse .nav-item[id="menu-newsroom"]').addClass('active');
+		$('.navbar-collapse .nav-item').removeClass('current-menu-item');
+		$('.navbar-collapse .nav-item[id="menu-newsroom"]').addClass('current-menu-item');
 		//console.log('newsroom');
 	break;
 	case 'blog':
-		$('.navbar-collapse .nav-item').removeClass('active');
-		$('.navbar-collapse .nav-item[id="menu-blog"]').addClass('active');
+		$('.navbar-collapse .nav-item').removeClass('current-menu-item');
+		$('.navbar-collapse .nav-item[id="menu-blog"]').addClass('current-menu-item');
 		//console.log('blog');
 	break;
 }

@@ -1,5 +1,107 @@
 $(document).ready(function() {
 
+//======================== NES CARDS SLIDER FUNCTIONALITY 
+var margin = 40;
+var slideWindow = $('.slide-window');
+var slideContainer = $('.slide-container');
+var featuredSlideContainer = $('.featured .slide-container');
+var pressSlideContainer = $('.press .slide-container');
+var featuredSlideNum = $('.featured .slide-container .card').length;
+var pressSlideNum = $('.press .slide-container .card').length;
+var prev = $('.news-slide-nav .prev');
+var next = $('.news-slide-nav .next');
+
+
+// SET UP PRESENTATION
+featuredSlideContainer.css({
+	'width': $('.featured .slide-container .card').width() * featuredSlideNum + featuredSlideNum * margin
+});
+pressSlideContainer.css({
+	'width': $('.press .slide-container .card').width() * pressSlideNum + pressSlideNum * margin
+});
+prev.addClass('disabled');
+
+if(featuredSlideContainer.width() <= slideWindow.width() + margin * 2) {
+	$('.featured .news-slide-nav .next').addClass('disabled');
+}
+if(pressSlideContainer.width() <= slideWindow.width() + margin * 2) {
+	$('.press .news-slide-nav .next').addClass('disabled');
+}
+
+
+next.click(function(e) {
+	e.preventDefault();
+	if ($(this).parent().parent().is('.featured')) {
+		var section = 'featured';
+		animateSlidesForward($(this), section);
+	} else {
+		var section = 'press';
+		animateSlidesForward($(this), section);
+	}
+})
+prev.click(function(e) {
+	e.preventDefault();
+	if ($(this).parent().parent().is('.featured')) {
+		var section = 'featured';
+		animateSlidesBack($(this), section);
+	} else {
+		var section = 'press';
+		animateSlidesBack($(this), section);
+	}
+})
+
+function animateSlidesForward(t, section) {
+	var container = t.parent().next();
+	var left = container.position().left;
+	var overflowWidth = container.width() - slideWindow.width();
+	var slideDist;
+
+	console.log(container.width(), left)
+
+	t.siblings().removeClass('disabled');
+	slideDist = container.width() - slideWindow.width();
+	if(Math.abs(left) >= slideWindow.width()) {
+		t.addClass('disabled');
+	}
+	if(container.width() - slideWindow.width() > slideWindow.width()) {
+		slideDist = slideWindow.width();
+	} else {
+		slideDist = overflowWidth % slideWindow.width();
+	}
+	container.animate({
+		'left': left - slideDist
+	}, 500, function() {
+		left = container.position().left;
+		console.log(container.width(), left)
+	})
+}
+function animateSlidesBack(t, section) {
+	var container = t.parent().next();
+	var left = container.position().left;
+	var slideDist;
+
+	console.log(left)
+
+	t.siblings().removeClass('disabled');
+	if(container.width() - slideWindow.width() > left) {
+		slideDist = slideWindow.width();
+	} else {
+		slideDist = overflowWidth % left;
+	}
+	container.animate({
+		'left': left + slideDist
+	}, 500, function() {
+		left = container.position().left;
+		if(Math.abs(left) === 0) {
+			t.addClass('disabled');
+		}
+		console.log(left)
+	})
+}
+
+//console.log(next.parent().next().is('.featured'))
+
+
 //======================== MAIN NAVIGATION CURRENT HIGHLIGHTING
 var curPage = $('body').attr('id');
 switch(curPage) {

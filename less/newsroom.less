@@ -34,14 +34,53 @@
 	width: 100%;
 }
 
-.featured.row {
-	margin: 0;
+
+.slide-window {
+	width: 100%;
+	height: 645px;
+	overflow: hidden;
+	position: relative;
+	@media screen and (max-width: 575px) {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		height: 495px;
+		overflow: auto;
+		border: 1px solid red;
+	}
+	@media screen and (min-width: 576px) and (max-width: 1024px) {
+		width: 100%;
+	}
+}
+.slide-container {
+	position: absolute;
+	left: 0;
+}
+.news-slide-nav {
+	padding: 0 .25em;
+
+	.next,
+	.prev {
+		color: @secondary;
+
+		&.disabled {
+			color: inherit;
+			&:hover {
+				cursor: normal;
+			}
+		}
+		&:hover {
+			text-decoration: none;
+			border-bottom: none;
+		}
+	}
 }
 
 .card {
-	margin-right: 1em;
-	width: calc(33% - 1rem);
-	height: 647px;
+	margin-right: 40px;
+	width: 385px;
+	display: inline-block;
+	height: 645px;
 	border: none;
 	.border-radius(0px);
 
@@ -49,11 +88,12 @@
 		margin-right: 0;
 	}
 	@media screen and (max-width: 575px) {
-		width: calc(50% - 1rem);
-		height: 400px;
+		width: 200px;
+		height: 450px;
 	}
-	@media screen and (min-width: 576px) and (max-width: 767px) {
-		width: calc(50% - 1rem);
+	@media screen and (min-width: 576px) and (max-width: 1024px) {
+		width: 300px;
+		height: 600px;
 	}
 	a {
 		color: inherit;
@@ -73,30 +113,30 @@
 }
 .card-title {
 	font-size: @h5size;
+	@media screen and (max-width: 575px) {
+		font-size: @bodyCopy;
+	}
 }
 .card-top {
 	position: relative;
 	height: 256px;
 	overflow: hidden;
-	 img {
-	 	margin-top: -2em;
-	 }
+	img {
+		margin-top: -2em;
+	}
+	@media screen and (max-width: 575px) {
+		height: auto;
+	}
 }
 .card-body {
 	padding: 30px;
 }
 .card-text {
 	line-height: 2.2em;
-}
-.category-marker {
-	margin-left: 2em;
-	padding: 1em 3em 1em 1em;
-	position: absolute;
-	bottom: 0;
-	color: @white;
-	background: @secondary;
-	-webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-	clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
+	@media screen and (max-width: 575px) {
+		font-size: @bodyCopy;
+		line-height: 1.3em;
+	}
 }
 .card-img-top {
 	.border-radius(0px);

@@ -56,8 +56,13 @@
 <section id="social">
 	<h2><span>Social</span></h2>
 	<div class="row justify-content-center">
-		<div class="twitter-feed">Twitter Feed</div>
-		<div class="twitter-cta">Twitter CTA</div>
+		<div class="twitter-feed">
+			<a class="twitter-timeline" data-width="387" data-height="453" href="https://twitter.com/JLR_News?ref_src=twsrc%5Etfw">Tweets by JLR_News</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+		<div class="twitter-cta">
+			<div class="icon-twitter"><img src="img/twitter-ic.svg" alt=""></div>
+			<p>Stay up to date on the latest from the Jaguar Land Rover Incubator by following us on Twitter.</p>
+		</div>
 	</div>
 </section>
 
@@ -65,8 +70,9 @@
 
 <section id="videos" class="">
 	<h2><span>Videos</span></h2>
-	<div class="hero-video">
-		<img class="img-fluid" src="http://placehold.it/1240x749">
+	<div class="hero-video row justify-content-center">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/3Ss5P-iaJLM" frameborder="0" allowfullscreen></iframe>
+		<!--img class="img-fluid" src="http://placehold.it/1240x749"-->
 	</div>
 </section>
 
@@ -175,15 +181,26 @@
 			</div>
 
 		</div>
+
 	</section>
 
-	<nav class="pagination-container" aria-label="Featured news articles">
+	<nav class="pagination-container pagination-featured" aria-label="Featured news articles">
 		<ul class="pagination pagination-lg justify-content-center">
-			<li class="page-item"><a class="page-link" href="#">1</a></li>
-			<li class="page-item"><a class="page-link" href="#">2</a></li>
-			<li class="page-item"><a class="page-link" href="#">3</a></li>
-			<li class="page-item"><a class="page-link" href="#">4</a></li>
-			<li class="page-item"><a class="page-link" href="#">5</a></li>
+			<li class="page-item">
+				<a class="page-link prev" href="#">
+					<span aria-hidden="true">&laquo;</span>
+					<span class="sr-only">Previous</span>
+				</a>
+			</li>
+			<li class="page-item current-page">currentpagination</li>
+			<li class="page-item middle">of</li>
+			<li class="page-item page-total">replace me</li>
+			<li class="page-item">
+				<a class="page-link next" href="#">
+					<span aria-hidden="true">&raquo;</span>
+					<span class="sr-only">Next</span>
+				</a>
+			</li>
 		</ul>
 	</nav>
 
@@ -236,16 +253,39 @@
 				</div>
 			</div>
 
+			<div class="card press-card">
+				<div class="card-top">
+					<div class="category-marker d-block d-sm-block d-md-none">Category</div>
+					<img class="card-img-top" src="img/card-top-temp.jpg">
+				</div>
+				<div class="card-body">
+					<h4 class="card-title">Article Title</h4>
+					<p class="source">Name of source</p>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec turpis erat. Curabitur at augue.</p>
+					<a href="#" class="btn-cta">See full article</a>
+				</div>
+			</div>
+
 		</div>
 	</section>
 
-	<nav class="pagination-container" aria-label="Featured news articles">
+	<nav class="pagination-container pagination-press" aria-label="Featured press releases">
 		<ul class="pagination pagination-lg justify-content-center">
-			<li class="page-item"><a class="page-link" href="#">1</a></li>
-			<li class="page-item"><a class="page-link" href="#">2</a></li>
-			<li class="page-item"><a class="page-link" href="#">3</a></li>
-			<li class="page-item"><a class="page-link" href="#">4</a></li>
-			<li class="page-item"><a class="page-link" href="#">5</a></li>
+			<li class="page-item">
+				<a class="page-link prev" href="#">
+					<span aria-hidden="true">&laquo;</span>
+					<span class="sr-only">Previous</span>
+				</a>
+			</li>
+			<li class="page-item current-page">1</li>
+			<li class="page-item middle">of</li>
+			<li class="page-item page-total">replace me</li>
+			<li class="page-item">
+				<a class="page-link next" href="#">
+					<span aria-hidden="true">&raquo;</span>
+					<span class="sr-only">Next</span>
+				</a>
+			</li>
 		</ul>
 	</nav>
 
@@ -256,7 +296,7 @@
 <section id="contact" class="d-none d-md-block">
 	<h2><span>Media Contact</span></h2>
 	<p class="lead">For media inquiries, please contact</p>
-	<p class="lead">Tami Wood at: twood4@jaguarlandrover.com</p>
+	<p class="lead">Tami Wood at <a href="mailto:twood4@jaguarlandrover.com">twood4@jaguarlandrover.com</a></p>
 </section>
 
 </div>

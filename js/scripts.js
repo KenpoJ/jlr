@@ -10,6 +10,8 @@ var featuredSlideNum = $('.featured .slide-container .card').length;
 var pressSlideNum = $('.press .slide-container .card').length;
 var prev = $('.news-slide-nav .prev');
 var next = $('.news-slide-nav .next');
+var overflowWidth;
+var currentPagination = 1;
 
 
 // SET UP PRESENTATION
@@ -20,6 +22,7 @@ pressSlideContainer.css({
 	'width': $('.press .slide-container .card').width() * pressSlideNum + pressSlideNum * margin
 });
 prev.addClass('disabled');
+$('.pagination .page-link.prev').addClass('disabled');
 
 if(featuredSlideContainer.width() <= slideWindow.width() + margin * 2) {
 	$('.featured .news-slide-nav .next').addClass('disabled');
@@ -28,7 +31,24 @@ if(pressSlideContainer.width() <= slideWindow.width() + margin * 2) {
 	$('.press .news-slide-nav .next').addClass('disabled');
 }
 
+// SET UP AND HANDLE PAGINATION PRESENTATION
+$('.slide-window').each(function() {
+	var section;
+	var currentPagination = 1;
+	var totPages = Math.ceil( $(this).children('.slide-container').width() / $(this).width() );
 
+	if ($(this).hasClass('featured')) {
+		section = 'featured';
+		$('.pagination-container.pagination-featured').find('.page-total').html(totPages);
+		$('.pagination-container.pagination-featured').find('.current-page').html(currentPagination);
+	} else {
+		section = 'press';
+		$('.pagination-container.pagination-press').find('.page-total').html(totPages);
+		$('.pagination-container.pagination-press').find('.current-page').html(currentPagination);
+	}
+})
+
+// Top navigation for sliders
 next.click(function(e) {
 	e.preventDefault();
 	if ($(this).parent().parent().is('.featured')) {
@@ -49,44 +69,70 @@ prev.click(function(e) {
 		animateSlidesBack($(this), section);
 	}
 })
+// Bottom navigation for sliders
+$('.pagination .page-link.next').click(function(e) {
+	e.preventDefault();
+	if ($(this).parent().parent().parent().prev().is('.featured')) {
+		var section = 'featured';
+		animateSlidesForward($(this), section);
+	} else {
+		var section = 'press';
+		animateSlidesForward($(this), section);
+	}
+})
+$('.pagination .page-link.prev').click(function(e) {
+	e.preventDefault();
+	//console.log($(this).parent().parent().parent().prev())
+	if ($(this).parent().parent().parent().prev().is('.featured')) {
+		var section = 'featured';
+		animateSlidesBack($(this), section);
+	} else {
+		var section = 'press';
+		animateSlidesBack($(this), section);
+	}
+})
 
+// Animate slides NEXT
 function animateSlidesForward(t, section) {
-	var container = t.parent().next();
+	console.log(currentPagination)
+	var container = $('.slide-window.' + section).children('.slide-container');
 	var left = container.position().left;
-	var overflowWidth = container.width() - slideWindow.width();
 	var slideDist;
-
-	console.log(container.width(), left)
 
 	t.siblings().removeClass('disabled');
 	slideDist = container.width() - slideWindow.width();
-	if(Math.abs(left) >= slideWindow.width()) {
-		t.addClass('disabled');
-	}
-	if(container.width() - slideWindow.width() > slideWindow.width()) {
+	if (!overflowWidth && container.width() > slideWindow.width() * 2) {
 		slideDist = slideWindow.width();
-	} else {
-		slideDist = overflowWidth % slideWindow.width();
+	} else if (!overflowWidth) {
+		slideDist = container.width() - slideWindow.width();
+	} else if (overflowWidth < slideWindow.width()) {
+		slideDist = overflowWidth;
+	} else if (overflowWidth - slideWindow.width() > slideWindow.width() || container.width() - slideWindow.width() > slideWindow.width()) {
+		slideDist = slideWindow.width();
 	}
 	container.animate({
 		'left': left - slideDist
 	}, 500, function() {
 		left = container.position().left;
-		console.log(container.width(), left)
+		overflowWidth = container.width() - (Math.abs(left) + slideWindow.width());
+		if (overflowWidth == 0) {
+			t.addClass('disabled');
+		}
+		currentPagination += 1;
+		$('.pagination-container.pagination-' + section).find('.current-page').html(currentPagination);
 	})
 }
+// Animate slides PREVIOUS
 function animateSlidesBack(t, section) {
-	var container = t.parent().next();
+	var container = $('.slide-window.' + section).children('.slide-container');
 	var left = container.position().left;
 	var slideDist;
 
-	console.log(left)
-
 	t.siblings().removeClass('disabled');
-	if(container.width() - slideWindow.width() > left) {
+	if (Math.abs(left) < slideWindow.width()) {
+		slideDist = Math.abs(left);
+	} else if (container.width() - slideWindow.width() > left) {
 		slideDist = slideWindow.width();
-	} else {
-		slideDist = overflowWidth % left;
 	}
 	container.animate({
 		'left': left + slideDist
@@ -95,11 +141,10 @@ function animateSlidesBack(t, section) {
 		if(Math.abs(left) === 0) {
 			t.addClass('disabled');
 		}
-		console.log(left)
+		currentPagination -= 1;
+		$('.pagination-container.pagination-' + section).find('.current-page').html(currentPagination);
 	})
 }
-
-//console.log(next.parent().next().is('.featured'))
 
 
 //======================== MAIN NAVIGATION CURRENT HIGHLIGHTING

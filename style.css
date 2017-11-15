@@ -731,14 +731,69 @@ footer.main-footer .address h6 {
   }
 }
 .twitter-cta {
+  padding: 100px 30px 30px 30px;
   color: #ffffff;
   background: #4a4f54;
 }
-.pagination-container {
-  padding-top: 30px;
+.twitter-cta .icon-twitter {
+  margin-bottom: 30px;
+  width: 55px;
+}
+.twitter-cta p {
+  font-size: 36px;
+  line-height: 36px;
+}
+.hero-video {
   width: 100%;
 }
+.next,
+.prev {
+  color: #ff6600;
+}
+.next.disabled,
+.prev.disabled {
+  color: inherit;
+}
+.next.disabled:hover,
+.prev.disabled:hover {
+  cursor: normal;
+}
+.next:hover,
+.prev:hover {
+  text-decoration: none;
+  border-bottom: none;
+}
+.pagination-container {
+  margin-bottom: 60px;
+  width: 100%;
+}
+.pagination-container li {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 36px;
+}
+.pagination-container li:hover {
+  background: transparent;
+}
+.pagination-container li.middle,
+.pagination-container li.page-total,
+.pagination-container li.current-page {
+  padding: .6em 10px 0 10px;
+}
+.pagination-container li.middle {
+  padding-top: .7em;
+  font-size: 27px;
+}
+span.page-link {
+  color: inherit;
+  border: none;
+}
+a.page-link {
+  color: #ff6600;
+  border: none;
+}
 .slide-window {
+  margin-bottom: 30px;
   width: 100%;
   height: 645px;
   overflow: hidden;
@@ -751,7 +806,6 @@ footer.main-footer .address h6 {
     width: 100%;
     height: 495px;
     overflow: auto;
-    border: 1px solid red;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 1024px) {
@@ -765,23 +819,6 @@ footer.main-footer .address h6 {
 }
 .news-slide-nav {
   padding: 0 .25em;
-}
-.news-slide-nav .next,
-.news-slide-nav .prev {
-  color: #ff6600;
-}
-.news-slide-nav .next.disabled,
-.news-slide-nav .prev.disabled {
-  color: inherit;
-}
-.news-slide-nav .next.disabled:hover,
-.news-slide-nav .prev.disabled:hover {
-  cursor: normal;
-}
-.news-slide-nav .next:hover,
-.news-slide-nav .prev:hover {
-  text-decoration: none;
-  border-bottom: none;
 }
 .card {
   margin-right: 40px;
@@ -861,6 +898,10 @@ footer.main-footer .address h6 {
 }
 #contact .lead {
   text-align: center;
+}
+#contact .lead a {
+  font-family: 'Proxima Nova', sans-serif;
+  color: #ff6600;
 }
 /* --------------- PORTFOLIO SPECIFIC --------------- */
 .partner {

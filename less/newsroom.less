@@ -25,17 +25,73 @@
 	}
 }
 .twitter-cta {
+	padding: 100px 30px 30px 30px;
 	color: @white;
 	background: @dkGray;
+
+	.icon-twitter {
+		margin-bottom: @sectionMargin / 2;
+		width: 55px;
+	}
+	p {
+		font-size: @h2size;
+		line-height: @h2size;
+	}
 }
 
-.pagination-container {
-	padding-top: @sectionMargin / 2;
+.hero-video {
 	width: 100%;
 }
 
+.next,
+.prev {
+	color: @secondary;
+
+	&.disabled {
+		color: inherit;
+		&:hover {
+			cursor: normal;
+		}
+	}
+	&:hover {
+		text-decoration: none;
+		border-bottom: none;
+	}
+}
+.pagination-container {
+	margin-bottom: @sectionMargin;
+	width: 100%;
+
+	li {
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: @h2size;
+
+		&:hover {
+			background: transparent;
+		}
+		&.middle,
+		&.page-total,
+		&.current-page {
+			padding: .6em 10px 0 10px;
+		}
+		&.middle {
+			padding-top: .7em;
+			font-size: @h2size * .75;
+		}
+	}
+}
+span.page-link {
+	color: inherit;
+	border: none;
+}
+a.page-link {
+	color: @secondary;
+	border: none;
+}
 
 .slide-window {
+	margin-bottom: @sectionMargin / 2;
 	width: 100%;
 	height: 645px;
 	overflow: hidden;
@@ -46,7 +102,6 @@
 		width: 100%;
 		height: 495px;
 		overflow: auto;
-		border: 1px solid red;
 	}
 	@media screen and (min-width: 576px) and (max-width: 1024px) {
 		width: 100%;
@@ -58,22 +113,6 @@
 }
 .news-slide-nav {
 	padding: 0 .25em;
-
-	.next,
-	.prev {
-		color: @secondary;
-
-		&.disabled {
-			color: inherit;
-			&:hover {
-				cursor: normal;
-			}
-		}
-		&:hover {
-			text-decoration: none;
-			border-bottom: none;
-		}
-	}
 }
 
 .card {
@@ -145,5 +184,10 @@
 #contact {
 	.lead {
 		text-align: center;
+
+		a {
+			font-family: 'Proxima Nova', sans-serif;
+			color: @secondary;
+		}
 	}
 }
